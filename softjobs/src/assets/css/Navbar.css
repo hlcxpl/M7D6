@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.navbar .logo{
+    font-weight: bold;
+    font-size: 28px;
+    font-style: italic;
+  }
+  
+
+.navbar .opciones {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .opciones span{
+    cursor: pointer;
+}
+
+.navbar .register-btn {
+  background: #3c6e71;
+  color: white;
+}
+.navbar .login-btn {
+  background: #d9d9d9;
+}

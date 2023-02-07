@@ -41,3 +41,12 @@ app.get('/usuarios', reportarConsulta, async (req, res) => {
     const info = mostrarInfo(usuario)
     res.json(info)
 })
+app.get('/perfil', reportarConsulta, async (req, res) => {
+    const Authorization = req.header("Authorization")
+    const token = Authorization.split("Bearer ")[1]
+    jwt.verify(token, "a-z_A-Z")
+    const { email } = jwt.decode(token)
+    const usuario = await obtenerUsuario(email)
+    const info = mostrarInfo(usuario)
+    res.json(info)
+})
